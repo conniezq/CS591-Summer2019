@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div *ngFor="let price of prices">
+  Depart from : {{price.departureAirport}}
+  <br>
+  Arrive at : {{price.arrivalAirport}}
+  <br>
+  The lowest price is: {{price.minPrice}}
+  <br>
+  The currency is : {{price.currency}}
+  <br><br>
+</div>
+
