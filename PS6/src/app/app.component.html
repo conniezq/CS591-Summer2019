@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+
+<div>
+  <p>Please enter the desired departure airport, arrival airport and date.</p>
+  <label>DEP</label> <input type="text" [(ngModel)]="price.DEP" required>
+  <label>ARR</label> <input type="text" [(ngModel)] = "price.ARR" required>
+  <label>DATE</label> <input type="date" [(ngModel)]="price.DATE" required>
+  <button (click)=getPrice()>Query</button>
+</div>
+
+
+
+
+<div>
+  <ul>
+    <li *ngFor="let price of prices">
+      <h1> The price is : {{price.minPrice}}</h1>
+      <h1> The currency is : {{price.value}}</h1>
+    </li>
+  </ul>
+</div>
